@@ -14,13 +14,26 @@
     <title>Jovian Careers</title>
 </head>
 <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://a7a4fc7f-2cca-4c69-9f4d-02c6542ccfd4-00-2i0o9plwkissl.kirk.replit.dev/static/banner.jpg" height='320'>
 	<div class="container">
 		<h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
-		<img class="img-fluid" id="banner" src="https://a7a4fc7f-2cca-4c69-9f4d-02c6542ccfd4-00-2i0o9plwkissl.kirk.replit.dev/static/banner.jpg" height='320'>
-		<h2 class="text-center mt-2 mb-4 ">About Jovian</h2>
-		<p class="lead">
-		    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+        <div class="row">
+            <div class="col-6">
+        </div>
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-center mt-2 mb-4 ">About Jovian</h2>
+        <div>
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </div>
+    <div class="col-6">
+        <img src="/static/people.jpg" class="img-fluid" style="width:100%; height:360px; border-radius:4px;">
+    </div>
+</div></br></br>
 		<h2 class="text-center mt-2 mb-4">Open Positions</h2>
 		<div>
             {% for job in jobs %}
@@ -28,9 +41,10 @@
             {% endfor %}
         </div>
         <div class="text-center">
-            <button class="btn btn-primary btn-lg">Contact Us</button>
+            <a href="mailto: hello@jovian.ai?subject=Application for {{jobs['title']}}" class="btn btn-primary btn-lg">Contact Us</a>
             <p class="mt-3">Copyright 2024, Jovian</p>
         </div>
 	</div>
+    {% include 'footer.html' %}
 </body>
 </html>
